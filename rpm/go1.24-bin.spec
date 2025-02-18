@@ -79,9 +79,9 @@ Go runtime race detector libraries. Install this package if you wish to use the
 %build
 
 %install
-cd installroot
-tar xvf %{SOURCE0}
-cd ..
+pushd "%{buildroot}" 
+tar xf %{SOURCE0}
+popd
 
 %files
 %{_bindir}/go
